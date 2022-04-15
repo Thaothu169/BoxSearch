@@ -17,6 +17,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.server.handler.ClickElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.testng.annotations.AfterTest;
 
@@ -43,6 +44,9 @@ public class TestNG {
      //3 - Lấy Title và in ra console
      
      System.out.println(driver.getTitle());
+    
+//     abcd
+//     vvvv
      
   }
   @Test
@@ -55,7 +59,7 @@ public class TestNG {
 	driver.findElement(By.xpath("//*[@id=\"product_39aa5347-9776-43c9-815a-cc4799d3ab49\"]/div/div/form/div/div/div[2]/div[1]/div/div[2]/div[1]/div/div[32]/div")).click();
 	Thread.sleep(1000);
 	driver.findElement(By.xpath("//*[@id='product_39aa5347-9776-43c9-815a-cc4799d3ab49']/div/div/form/div/div/div[2]/div[2]/div/div[1]/input")).sendKeys("HKT");
-	Thread.sleep(2000);
+	Thread.sleep(3000);
 	driver.findElement(By.xpath("//*[@id=\"product_39aa5347-9776-43c9-815a-cc4799d3ab49\"]/div/div/form/div/div/div[2]/div[2]/div/div[2]/div[1]/div/div[2]")).click();
 	Thread.sleep(2000);
 	driver.findElement(By.id("btnSubmitStopoverSeparate")).click();
@@ -64,12 +68,34 @@ public class TestNG {
 	Thread.sleep(5000);
 	driver.findElement(By.xpath("//span[contains(text(), 'Change Stopover')]")).click();
 	Thread.sleep(2000);
-	driver.findElement(By.linkText("Book")).click();
-	Thread.sleep(5000);
-	driver.findElement(By.xpath("//li/span[contains(text()='Stopover summary']"));
+	driver.findElement(By.xpath("//div[@class='line-control line-control-0']//a[@class='btn btn-sm btn-link']")).click();
 	Thread.sleep(2000);
-//	driver.findElement(By.linkText("Highlights")).click();
+	driver.findElement(By.xpath("/html/body/div[4]/div/div[1]/div/div[4]/div[3]/div/div/div[3]/button")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//div[@class='line-control']//a[@class='btn btn-sm btn-link']")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("/html/body/div[4]/div/div[1]/div/div[4]/div[2]/div/div/div[3]/button")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.cssSelector("input[name='checkbox01']"));
+	
+	
+	
+	//driver.findElement(By.xpath("//div[@class='line-control']//a[@class='btn btn-sm btn-link']")).click();
+	//Thread.sleep(2000);
+//	driver.findElement(By.xpath("//button[@class='btn btn-sm btn-primary bt-effect']")).click();
+	//Thread.sleep(5000);
+//	driver.findElement(By.className("mtr-input section-right")).click();
+//	driver.findElement(By.xpath("//button[@class='btn btn-sm btn-primary bt-effect']]")).click();
+	//Thread.sleep(5000);
+//	
+	
+//	driver.findElement(By.linkText("Book")).click();
+//	Thread.sleep(5000);
+//	driver.findElement(By.xpath("//li/span[contains(text()='Stopover summary']"));
 //	Thread.sleep(2000);
+//	driver.findElement(By.xpath("//span[contains(test(), 'Stopover summary')]")).click();
+//	Thread.sleep(2000);
+//	
 //	driver.findElement(By.linkText("Stopover Photos")).click();
 //	Thread.sleep(2000);
 //	driver.findElement(By.linkText("In this Stopover")).click();
